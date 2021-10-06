@@ -32,6 +32,11 @@ function setTime() {
 
 start.addEventListener("click", function() {
 
+    var startButton = document.getElementById("start");
+    var body = document.getElementById("body");
+    body.removeChild(startButton);
+
+
     document.getElementById("aText").innerHTML = choices.choiceA;
     document.getElementById("bText").innerHTML = choices.choiceB;
     document.getElementById("cText").innerHTML = choices.choiceC;

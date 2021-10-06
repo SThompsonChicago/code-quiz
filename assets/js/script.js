@@ -1,6 +1,6 @@
 var start = document.querySelector("#start");
 
-var timeEl = document.querySelector(".time");
+var timeEl = document.querySelector("#time");
 
 var choiceA = document.querySelector("#a");
 var choiceB = document.querySelector("#b");
@@ -43,6 +43,10 @@ start.addEventListener("click", function() {
     document.getElementById("cText").innerHTML = choices.choiceC;
     document.getElementById("dText").innerHTML = choices.choiceD;
 
+    let btn = document.createElement("button");
+    btn.innerHTML = "Click Me";
+    document.body.appendChild(btn);
+
 
 
 
@@ -57,6 +61,10 @@ choiceA.addEventListener("click", function() {
     var question = document.getElementById("question");
     var body = document.getElementById("body");
     body.removeChild(question);
+
+    var time = document.getElementById("time");
+    var body = document.getElementById("body");
+    body.removeChild(time);
 
     var answers = document.getElementById("answers");
     var body = document.getElementById("body");
@@ -79,6 +87,10 @@ choiceB.addEventListener("click", function() {
     var body = document.getElementById("body");
     body.removeChild(question);
 
+    var time = document.getElementById("time");
+    var body = document.getElementById("body");
+    body.removeChild(time);
+
     var answers = document.getElementById("answers");
     var body = document.getElementById("body");
     body.removeChild(answers);
@@ -98,6 +110,10 @@ choiceC.addEventListener("click", function() {
     var question = document.getElementById("question");
     var body = document.getElementById("body");
     body.removeChild(question);
+
+    var time = document.getElementById("time");
+    var body = document.getElementById("body");
+    body.removeChild(time);
 
     var answers = document.getElementById("answers");
     var body = document.getElementById("body");
@@ -119,6 +135,10 @@ choiceD.addEventListener("click", function() {
     var body = document.getElementById("body");
     body.removeChild(question);
 
+    var time = document.getElementById("time");
+    var body = document.getElementById("body");
+    body.removeChild(time);
+
     var answers = document.getElementById("answers");
     var body = document.getElementById("body");
     body.removeChild(answers);
@@ -133,3 +153,6 @@ choiceD.addEventListener("click", function() {
     }
 
 });
+
+
+

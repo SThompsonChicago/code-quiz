@@ -38,14 +38,13 @@ start.addEventListener("click", function() {
 
     document.getElementById("question").innerHTML = "Commonly used data types DO NOT include:";
 
+    let btnA = document.createElement("button");
+
+
     document.getElementById("aText").innerHTML = choices.choiceA;
     document.getElementById("bText").innerHTML = choices.choiceB;
     document.getElementById("cText").innerHTML = choices.choiceC;
     document.getElementById("dText").innerHTML = choices.choiceD;
-
-    let btn = document.createElement("button");
-    btn.innerHTML = "Click Me";
-    document.body.appendChild(btn);
 
 
 

@@ -15,7 +15,7 @@ const choices = {
     choiceCorrect: "3. alerts"
 };
 
-var secondsLeft = 30;
+var secondsLeft = 60;
 
 function setTime() {
     var timerInterval = setInterval(function() {
@@ -43,6 +43,9 @@ start.addEventListener("click", function() {
     document.getElementById("cText").innerHTML = choices.choiceC;
     document.getElementById("dText").innerHTML = choices.choiceD;
 
+
+
+
     setTime();
 
 });
@@ -51,45 +54,82 @@ start.addEventListener("click", function() {
 
 
 choiceA.addEventListener("click", function() {
+    var question = document.getElementById("question");
+    var body = document.getElementById("body");
+    body.removeChild(question);
+
+    var answers = document.getElementById("answers");
+    var body = document.getElementById("body");
+    body.removeChild(answers);
+
+
     if (choices.choiceA === choices.choiceCorrect){
         const score = secondsLeft;
         document.getElementById("displayScore").innerHTML = "Score = " + score;
     }
     else {
         document.getElementById("displayScore").innerHTML = "Score = 0";
+        secondsLeft = secondsLeft - 10;
     }
 
 });
 
 choiceB.addEventListener("click", function() {
+    var question = document.getElementById("question");
+    var body = document.getElementById("body");
+    body.removeChild(question);
+
+    var answers = document.getElementById("answers");
+    var body = document.getElementById("body");
+    body.removeChild(answers);
+
     if (choices.choiceB === choices.choiceCorrect){
         const score = secondsLeft;
         document.getElementById("displayScore").innerHTML = "Score = " + score;
     }
     else {
         document.getElementById("displayScore").innerHTML = "Score = 0";
+        secondsLeft = secondsLeft - 10;
     }
 
 });
 
 choiceC.addEventListener("click", function() {
+    var question = document.getElementById("question");
+    var body = document.getElementById("body");
+    body.removeChild(question);
+
+    var answers = document.getElementById("answers");
+    var body = document.getElementById("body");
+    body.removeChild(answers);
+
     if (choices.choiceC === choices.choiceCorrect){
         const score = secondsLeft;
         document.getElementById("displayScore").innerHTML = "Score = " + score;
     }
     else {
         document.getElementById("displayScore").innerHTML = "Score = 0";
+        secondsLeft = secondsLeft - 10;
     }
 
 });
 
 choiceD.addEventListener("click", function() {
+    var question = document.getElementById("question");
+    var body = document.getElementById("body");
+    body.removeChild(question);
+
+    var answers = document.getElementById("answers");
+    var body = document.getElementById("body");
+    body.removeChild(answers);
+
     if (choices.choiceD === choices.choiceCorrect){
         const score = secondsLeft;
         document.getElementById("displayScore").innerHTML = "Score = " + score;
     }
     else {
         document.getElementById("displayScore").innerHTML = "Score = 0";
+        secondsLeft = secondsLeft - 10;
     }
 
 });

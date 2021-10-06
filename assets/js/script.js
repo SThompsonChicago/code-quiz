@@ -36,6 +36,7 @@ start.addEventListener("click", function() {
     var body = document.getElementById("body");
     body.removeChild(startButton);
 
+    document.getElementById("question").innerHTML = "Commonly used data types DO NOT include:";
 
     document.getElementById("aText").innerHTML = choices.choiceA;
     document.getElementById("bText").innerHTML = choices.choiceB;
@@ -92,4 +93,3 @@ choiceD.addEventListener("click", function() {
     }
 
 });
-

@@ -1,3 +1,5 @@
+var start = document.querySelector("#start");
+
 var timeEl = document.querySelector(".time");
 
 var choiceA = document.querySelector("#a");
@@ -15,11 +17,6 @@ const choices = {
 
 var secondsLeft = 30;
 
-document.getElementById("aText").innerHTML = choices.choiceA;
-document.getElementById("bText").innerHTML = choices.choiceB;
-document.getElementById("cText").innerHTML = choices.choiceC;
-document.getElementById("dText").innerHTML = choices.choiceD;
-
 function setTime() {
     var timerInterval = setInterval(function() {
 
@@ -32,6 +29,20 @@ function setTime() {
 
     }, 1000);
 }
+
+start.addEventListener("click", function() {
+
+    document.getElementById("aText").innerHTML = choices.choiceA;
+    document.getElementById("bText").innerHTML = choices.choiceB;
+    document.getElementById("cText").innerHTML = choices.choiceC;
+    document.getElementById("dText").innerHTML = choices.choiceD;
+
+    setTime();
+
+});
+
+
+
 
 choiceA.addEventListener("click", function() {
     if (choices.choiceA === choices.choiceCorrect){
@@ -77,4 +88,3 @@ choiceD.addEventListener("click", function() {
 
 });
 
-setTime();
